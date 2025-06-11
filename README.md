@@ -24,8 +24,8 @@ Try it out: [https://qrninja.xanthis.xyz](https://qrninja.xanthis.xyz)
 
 ![Screenshot of QRNinja](./screenshot.png)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- HTML, JS, CSS, [qr-code-styling](https://www.npmjs.com/package/qr-code-styling), [jsQR](https://www.npmjs.com/package/jsqr)
+- HTML, JS, [Pico.css](https://picocss.com/), [qr-code-styling](https://www.npmjs.com/package/qr-code-styling), [jsQR](https://www.npmjs.com/package/jsqr)
 
 

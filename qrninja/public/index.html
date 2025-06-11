@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <meta name="title" content="QRNinja">
     <link rel="icon" href="favicon.png" type="image/png" />
     <meta name="description" content="Customize, Create and Read QR Codes instantly in your browser!">
-    <meta name="keywords" content="qrcode, qr, qr logo, qr code logo, custom qr code, qr code maker, qr code generator, qr code reader, camera qr scanner">
+    <meta name="keywords"
+        content="qrcode, qr, qr logo, qr code logo, custom qr code, qr code maker, qr code generator, qr code reader, camera qr scanner">
     <meta name="robots" content="index, nofollow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
@@ -151,13 +153,19 @@
 
         #reader-canvas-container {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         #reader-canvas,
         #crop-overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         #crop-overlay {
@@ -172,7 +180,10 @@
             text-align: center;
             color: var(--pico-secondary);
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             padding: 1rem;
         }
 
@@ -180,7 +191,6 @@
             width: auto;
             max-width: 500px;
         }
-
     </style>
 </head>
 
@@ -190,7 +200,8 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="qrninja-code.svg" width="60" height="60" title="QRNinja" alt="Image of a QR Code" style="filter: invert(var(--pico-invert-value));"/>
+                        <img src="qrninja-code.svg" width="60" height="60" title="QRNinja" alt="Image of a QR Code"
+                            style="filter: invert(var(--pico-invert-value));" />
                     </a>
                 </li>
             </ul>
@@ -224,7 +235,8 @@
                     <p><small>Customize your QR code.</small></p>
 
                     <label for="qr-text">Content</label>
-                    <textarea id="qr-text" rows="3" placeholder="Enter text or URL to encode" maxlength="2950"></textarea>
+                    <textarea id="qr-text" rows="3" placeholder="Enter text or URL to encode"
+                        maxlength="2950"></textarea>
                     <div id="char-counter">0 / 2950</div>
 
                     <div class="grid">
@@ -263,7 +275,8 @@
 
                     <label for="qr-logo" style="cursor: pointer;">Logo Image (optional)</label>
                     <input type="file" id="qr-logo" accept="image/*" style="cursor: pointer;">
-                    <button id="clear-logo-btn" class="secondary outline" style="display:none; margin-top: 0.5rem; margin-bottom: 0.5rem;">Clear Logo</button>
+                    <button id="clear-logo-btn" class="secondary outline"
+                        style="display:none; margin-top: 0.5rem; margin-bottom: 0.5rem;">Clear Logo</button>
 
                     <div class="grid">
                         <div class="dropdown">
@@ -288,7 +301,8 @@
                 <p>Upload an image or use your device's camera to scan a QR code.</p>
                 <div id="read-grid">
                     <div id="reader-preview" class="drop-zone">
-                         <video id="camera-feed" playsinline style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: var(--pico-border-radius);"></video>
+                        <video id="camera-feed" playsinline
+                            style="display: none; width: 100%; height: 100%; object-fit: cover; border-radius: var(--pico-border-radius);"></video>
                         <div id="reader-canvas-container" style="display:none;">
                             <canvas id="reader-canvas"></canvas>
                             <canvas id="crop-overlay"></canvas>
@@ -299,17 +313,20 @@
                     </div>
                     <div id="reader-controls">
                         <div class="grid">
-                           <button id="start-camera-btn" aria-busy="false">Use Camera</button>
-                           <button class="secondary" onclick="document.getElementById('read-file').click();">Upload File</button>
+                            <button id="start-camera-btn" aria-busy="false">Use Camera</button>
+                            <button class="secondary" onclick="document.getElementById('read-file').click();">Upload
+                                File</button>
                         </div>
                         <input type="file" id="read-file" accept="image/*" style="display:none">
-                        <button id="stop-camera-btn" class="contrast" style="display:none; margin-top: 1rem; width: 100%;">Stop Camera</button>
+                        <button id="stop-camera-btn" class="contrast"
+                            style="display:none; margin-top: 1rem; width: 100%;">Stop Camera</button>
 
                         <div id="reader-result-container" style="margin-top: 1rem; display:none;">
                             <h4>Scan Result:</h4>
                             <pre><code id="reader-result-text"></code></pre>
                             <div id="reader-warning" class="warning" style="display:none;">
-                                <small><strong>Caution:</strong> Always be careful when opening links from unknown sources.</small>
+                                <small><strong>Caution:</strong> Always be careful when opening links from unknown
+                                    sources.</small>
                             </div>
                         </div>
                     </div>
@@ -321,21 +338,30 @@
 
     <footer class="container">
         <hr>
-        <small>By Abhinav | <a href="https://xanthis.xyz" target="_blank">Website</a> | <a href="https://github.com/xanthisafk" target="_blank">GitHub</a> | <a href="https://ko-fi.com/xanthis" target="_blank">Ko-fi</a></small>
+        <small>
+            By Abhinav |
+            <a href="https://xanthis.xyz" target="_blank" rel="noopener noreferrer">Website</a> |
+            <a href="https://github.com/xanthisafk" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://ko-fi.com/xanthis" target="_blank" rel="noopener noreferrer">Ko-fi</a> |
+            Licensed under <a href="https://github.com/xanthisafk/QRNinja/blob/main/LICENSE" target="_blank"
+                rel="noopener noreferrer">MIT</a> |
+            <a href="https://github.com/xanthisafk/QRNinja" target="_blank" rel="noopener noreferrer">Source</a>
+        </small>
+
     </footer>
 
     <!-- Confirmation Dialog -->
     <dialog id="confirm-dialog">
         <article>
-          <header>
-            <a href="#close" aria-label="Close" class="close"></a>
-            <strong>Confirm Action</strong>
-          </header>
-          <p id="confirm-message">Are you sure you want to proceed?</p>
-          <footer>
-            <button id="confirm-cancel" class="secondary">Cancel</button>
-            <button id="confirm-ok" class="primary">OK</button>
-          </footer>
+            <header>
+                <a href="#close" aria-label="Close" class="close"></a>
+                <strong>Confirm Action</strong>
+            </header>
+            <p id="confirm-message">Are you sure you want to proceed?</p>
+            <footer>
+                <button id="confirm-cancel" class="secondary">Cancel</button>
+                <button id="confirm-ok" class="primary">OK</button>
+            </footer>
         </article>
     </dialog>
 
@@ -392,7 +418,7 @@
             let readerImage = null;
             let cropRect = null;
             let isDragging = false;
-            
+
             // Camera state
             let cameraStream = null;
             let animationFrameId = null;
@@ -493,7 +519,7 @@
                 const len = generatorElements.text.value.length;
                 generatorElements.charCounter.textContent = `${len} / 2953`;
             };
-            
+
             const resetGeneratorSettings = () => {
                 showConfirm("Are you sure you want to reset all generator settings?", (confirmed) => {
                     if (!confirmed) return;
@@ -536,7 +562,7 @@
             // Reader
             const scanQRCode = (imageData, width, height) => {
                 const code = jsQR(imageData, width, height, { inversionAttempts: "dontInvert" });
-                
+
                 if (code) {
                     // If we're scanning via camera, stop it to show the result clearly
                     if (cameraStream) stopCamera();
@@ -565,14 +591,14 @@
 
             const handleReaderUpload = (file) => {
                 if (!file || !file.type.startsWith('image/')) return;
-                if(cameraStream) stopCamera();
+                if (cameraStream) stopCamera();
 
                 readerImage = new Image();
                 readerImage.onload = () => {
                     readerElements.placeholder.style.display = 'none';
                     readerElements.cameraFeed.style.display = 'none';
                     readerElements.canvasContainer.style.display = 'block';
-                    
+
                     const containerWidth = readerElements.dropZone.clientWidth;
                     const scale = Math.min(1, containerWidth / readerImage.width);
                     const displayWidth = readerImage.width * scale;
@@ -605,7 +631,7 @@
                         readerElements.canvasContainer.style.display = 'none';
                         readerElements.cameraFeed.style.display = 'block';
                         readerElements.stopCameraBtn.style.display = 'block';
-                        
+
                         readerElements.canvas.width = readerElements.cameraFeed.videoWidth;
                         readerElements.canvas.height = readerElements.cameraFeed.videoHeight;
 
@@ -616,13 +642,13 @@
                     alert("Could not access the camera.");
                     stopCamera();
                 } finally {
-                     readerElements.startCameraBtn.setAttribute('aria-busy', 'false');
-                     readerElements.startCameraBtn.disabled = false;
+                    readerElements.startCameraBtn.setAttribute('aria-busy', 'false');
+                    readerElements.startCameraBtn.disabled = false;
                 }
             };
 
             const stopCamera = () => {
-                if(animationFrameId) cancelAnimationFrame(animationFrameId);
+                if (animationFrameId) cancelAnimationFrame(animationFrameId);
                 if (cameraStream) {
                     cameraStream.getTracks().forEach(track => track.stop());
                 }
@@ -642,7 +668,7 @@
                     scanQRCode(imageData.data, imageData.width, imageData.height);
                 }
                 // Continue scanning as long as the stream is active
-                if(cameraStream) {
+                if (cameraStream) {
                     animationFrameId = requestAnimationFrame(tick);
                 }
             };
@@ -652,7 +678,7 @@
             const setupDragAndDrop = (dropZone, onDrop) => {
                 dropZone.addEventListener('dragover', (e) => {
                     e.preventDefault(); e.stopPropagation();
-                    if(!cameraStream) dropZone.classList.add('drag-over');
+                    if (!cameraStream) dropZone.classList.add('drag-over');
                 });
                 dropZone.addEventListener('dragleave', (e) => {
                     e.preventDefault(); e.stopPropagation();
@@ -660,7 +686,7 @@
                 });
                 dropZone.addEventListener('drop', (e) => {
                     e.preventDefault(); e.stopPropagation();
-                    if(cameraStream) return; // Don't allow drop when camera is on
+                    if (cameraStream) return; // Don't allow drop when camera is on
                     dropZone.classList.remove('drag-over');
                     const file = e.dataTransfer.files[0];
                     onDrop(file);
@@ -678,14 +704,14 @@
                     link.addEventListener('click', e => {
                         e.preventDefault();
                         const targetTab = e.target.dataset.tab;
-                        if(targetTab === 'generate' && cameraStream) stopCamera(); // Stop camera if switching tabs
-                        
+                        if (targetTab === 'generate' && cameraStream) stopCamera(); // Stop camera if switching tabs
+
                         tabLinks.forEach(l => l.classList.remove('active'));
                         e.target.classList.add('active');
                         tabContents.forEach(content => content.classList.toggle('active', content.id === targetTab));
-                        
+
                         if (targetTab === 'generate') {
-                           setTimeout(createOrUpdateQRCode, 50);
+                            setTimeout(createOrUpdateQRCode, 50);
                         }
                     });
                 });
@@ -718,9 +744,10 @@
                     createOrUpdateQRCode();
                 }
             };
-            
+
             init();
         });
     </script>
 </body>
+
 </html>
