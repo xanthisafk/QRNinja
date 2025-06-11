@@ -1,4 +1,7 @@
-# QRNinja
+<h1>
+  <img src="./favicon.png" alt="QRNinja icon" width="100" height="100" style="vertical-align: middle; margin-right: 10px;">
+  QRNinja
+</h1>
 
 **Customizable QR code generator and reader — all in browser, no download needed!**
 
