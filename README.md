@@ -1,5 +1,5 @@
 <h1>
-  <img src="./qrninja-code.svg" alt="QRNinja icon" width="100" height="100" style="vertical-align: middle; margin-right: 10px;">
+  <img src="./qrninja/public/qrninja-code.svg" alt="QRNinja icon" width="100" height="100" style="vertical-align: middle; margin-right: 10px;">
   QRNinja
 </h1>
 
