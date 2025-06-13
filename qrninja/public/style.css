@@ -1,0 +1,173 @@
+:root {
+    --pico-font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.brand-title {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2.2rem;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+#theme-toggle {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generate-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pico-spacing);
+}
+
+#generate-settings {
+    flex: 1 1;
+}
+
+#generate-preview {
+    flex: 1 1;
+}
+
+@media (max-width: 768px) {
+    #generate-grid {
+        flex-direction: column;
+    }
+}
+
+#qr-canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--pico-card-background-color);
+    border: 1px solid var(--pico-card-border-color);
+    border-radius: var(--pico-card-border-radius);
+    min-height: 320px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#qr-canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--pico-card-background-color);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: var(--pico-border-radius);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid var(--pico-form-element-border-color);
+}
+
+.dropdown-content a {
+    color: var(--pico-primary-inverse);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--pico-primary-hover);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#char-counter {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--pico-secondary);
+    margin-top: -0.5rem;
+}
+
+/* Drag & Drop Styling */
+.drop-zone {
+    border: 2px dashed var(--pico-form-element-border-color);
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    position: relative;
+    min-height: 250px;
+}
+
+.drop-zone.drag-over {
+    background-color: var(--pico-primary-background);
+    border-color: var(--pico-primary-border);
+}
+
+/* Reader Layout */
+#read-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pico-spacing);
+}
+
+@media (max-width: 768px) {
+    #read-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#reader-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#reader-canvas,
+#crop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#crop-overlay {
+    cursor: crosshair;
+}
+
+#reader-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: var(--pico-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+}
+
+dialog {
+    width: auto;
+    max-width: 500px;
+}
